@@ -1,0 +1,1 @@
+This modern recipe website is built with the MERN stack (MongoDB, Express, React, Node.js) and styled using Tailwind CSS for a sleek, responsive design. It allows users to explore, add, and manage recipes with a clean, intuitive interface. With features like dynamic data fetching, image uploads, and mobile-friendly layouts, it’s a perfect blend of technology and taste.
