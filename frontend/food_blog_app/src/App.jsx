@@ -12,7 +12,7 @@ import About from './pages/About'
 
 const getAllRecipes=async()=>{
   let allRecipes=[]
-  await axios.get('http://localhost:5000/recipe').then(res=>{
+  await axios.get("https://food-recipe-backend-0vgx.onrender.com/recipe").then(res=>{
     allRecipes=res.data
   })
   return allRecipes
@@ -24,7 +24,7 @@ const getMyRecipes = async () => {
     if (!storedUser) return []
     const user = JSON.parse(storedUser)
     
-    const res = await axios.get(`http://localhost:5000/recipe?createdBy=${user._id}`)
+    const res = await axios.get(`https://food-recipe-backend-0vgx.onrender.com/recipe?createdBy=${user._id}`)
     return res.data || []
   } catch (err) {
     console.error("Error fetching my recipes:", err)
@@ -39,10 +39,10 @@ const getFavRecipes=()=>{
 
 const getRecipe=async({params})=>{
   let recipe;
-  await axios.get(`http://localhost:5000/recipe/${params.id}`)
+  await axios.get(`https://food-recipe-backend-0vgx.onrender.com/recipe/${params.id}`)
   .then(res=>recipe=res.data)
 
-  await axios.get(`http://localhost:5000/user/${recipe.createdBy}`)
+  await axios.get(`https://food-recipe-backend-0vgx.onrender.com/user/${recipe.createdBy}`)
   .then(res=>{
     recipe={...recipe,email:res.data.email}
   })
