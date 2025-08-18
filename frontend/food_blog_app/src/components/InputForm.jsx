@@ -10,7 +10,7 @@ export default function InputForm({setIsOpen}) {
   const handleOnSubmit=async(e)=>{
     e.preventDefault()
     let endpoint=(isSignUp) ? "signUp" : "login"
-    await axios.post(`http://localhost:5000/${endpoint}`,{email,password})
+    await axios.post(`https://food-recipe-backend-0vgx.onrender.com/${endpoint}`,{email,password})
     .then((res)=>{
        console.log("API Response:", res.data); // <-- Add this
         localStorage.setItem("token", res.data.token);
