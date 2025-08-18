@@ -22,7 +22,7 @@ export default function RecipeItems() {
     
     const onDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/recipe/${id}`)
+            await axios.delete(`https://food-recipe-backend-0vgx.onrender.com/recipe/${id}`)
             setAllRecipes(recipes => recipes.filter(recipe => recipe._id !== id))
             const updatedFavItems = favItems.filter(recipe => recipe._id !== id)
             setFavItems(updatedFavItems)
@@ -57,7 +57,7 @@ export default function RecipeItems() {
                             <div key={index} className='recipe-card' onDoubleClick={() => navigate(`/recipe/${item._id}`)}>
                                 <div className='recipe-image-container'>
                                     <img 
-                                        src={`http://localhost:5000/images/${item.coverImage}`} 
+                                        src={`https://food-recipe-backend-0vgx.onrender.com/images/${item.coverImage}`} 
                                         alt={item.title}
                                         className='recipe-image'
                                     />
