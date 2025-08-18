@@ -32,7 +32,7 @@ export default function AddFoodRecipe() {
         }
 
         try {
-            await axios.post("http://localhost:5000/recipe", formData, {
+            await axios.post("https://food-recipe-backend-0vgx.onrender.com/recipe", formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'authorization': 'bearer ' + localStorage.getItem("token")
