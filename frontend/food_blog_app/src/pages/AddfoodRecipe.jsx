@@ -66,7 +66,7 @@ export default function AddFoodRecipe() {
                     </div>
                     <div className='form-control'>
                         <label>Recipe Image</label>
-                        <input type="file" className='h-full w-full' name="file" onChange={onHandleChange}></input>
+                        <input type="file" className='input-textarea' name="file" onChange={onHandleChange}></input>
                     </div>
                     <button type="submit">Add Recipe</button>
                 </form>
